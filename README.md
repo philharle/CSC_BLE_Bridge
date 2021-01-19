@@ -6,8 +6,15 @@ The app will act as a Cycling speed/cadence and/or HR BLE sensor so other BLE de
 
 ![Screenshot](screenshots/screenshot_2.jpg)
 
+# Install
 
-## Details
+I didn't bother to add this to Google play store. It's completely free and open. Feel free to build the code yourself and try it out.
+
+However I've included a [release apk here](https://github.com/starryalley/CSC_BLE_Bridge/blob/master/app/release/app-release.apk). Feel free to use the apk to test on your ANT+ supported phones:
+
+```adb install -r /path/to/app-release.apk```
+
+# Details
 
 This is an Android app which reads ANT+ cycling speed/cadence (CSC) and/or heart rate sensors in the background (actually in an Android foreground service), and advertises itself as a `Bluetooth Low Energy (BLE)` device which implements `Cycling Speed and Cadence Profile (CSCP)` and `Heart Rate Profile (HRP)` so that other devices can see this Android device as a Cycling Speed and Cadence Bluetooth and/or Heart Rate BLE sensor.
 
@@ -29,7 +36,10 @@ Special thanks to [pinkemma](https://github.com/pinkemma) who implements Heart R
 - Samsung Galaxy S8 (Android 9)
 - Samsung Galaxy J5 2016 - Thanks [louisJ20](https://github.com/louisJ20)
 - Samsung Galaxy S9 (Android 10) - Thanks [pinkemma](https://github.com/pinkemma)
-- One Plus 7 Pro (Android 10)
+- One Plus 7 Pro (Android 10) - Thanks [michaelrhughes](https://github.com/michaelrhughes)
+- Nokia 7 Plus (not sure, to be tested. 12/1/2021) - Thanks [leaskovski](https://github.com/leaskovski)
+- OnePlus 5T (Android 10) - Thanks [philharle](https://github.com/philharle)
+- Galaxy Note 9 - Thanks [larryb84](https://github.com/larryb84)
 
 ## ANT+ Speed/Cadence sensors
 - [Garmin gen 1 ANT+ only speed and cadence sensor](https://buy.garmin.com/en-MW/ssa/p/146897)
@@ -37,17 +47,17 @@ Special thanks to [pinkemma](https://github.com/pinkemma) who implements Heart R
 
 ## ANT+ Heart Rate sensors
 - [Garmin HRM-Run](https://buy.garmin.com/en-AU/AU/p/530376)
+- Garmin HRM3-SS - Thanks [philharle](https://github.com/philharle)
 - Garmin Fenix 5s with broadcasting mode on (ANT+ signal) - Thanks [pinkemma](https://github.com/pinkemma)
 - Garmin 935 with broadcasting mode on (ANT+ signal)
+- Garmin Fenix 6 with broadcasting mode on (ANT+ signal) 
+- Garmin HRM2 - Thanks [larryb84](https://github.com/larryb84)
 
 ## Apps that use BLE sensors
-- Zwift (Mac version)
+- Zwift (Mac/iPad/Windows version)
 - The Sufferfest (Mac version)
+- theoretically all other apps that use Speed/Cadence/Heart Rate BLE sensors
 
-
-# TODO
-- limited testing. See Tested devices list above.
-- more sensors?
 
 # Known issues
 
