@@ -282,6 +282,19 @@ public class CSCService extends Service {
             // if the device is dead (closed)
             if (newDeviceState == DeviceState.DEAD) {
                 bsdPcc = null;
+
+                Log.d(TAG, "DEAD device detected. Rescanning:" + type);
+
+                if (type == AntSensorType.CyclingSpeed) {
+                    startSpeedSensorSearch();
+                } else if (type == AntSensorType.CyclingCadence) {
+                    startCadenceSensorSearch();
+                } else if (type == AntSensorType.HR) {
+                    startHRSensorSearch();
+                }
+                //do we need to backoff and check status of scan
+                //or will a failure on rescan reenter this method
+
             }
         }
     }
